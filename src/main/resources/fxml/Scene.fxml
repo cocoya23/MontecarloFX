@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="500" prefWidth="320"
+            fx:id="panel"  fx:controller="com.mycompany.chart.FXMLController">
+    <children>
+        
+        <ScatterChart layoutX="0" layoutY="0" fx:id="grafica"  >
+            <xAxis>
+                <NumberAxis label="Eje X" lowerBound="-50" upperBound="50"  tickUnit="5"  />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Eje Y" lowerBound="-50" upperBound="50" tickUnit="5" />
+            </yAxis>
+        </ScatterChart> 
+        
+    </children>
+</AnchorPane>
