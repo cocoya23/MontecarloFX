@@ -7,18 +7,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.chart.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" prefHeight="500" prefWidth="320"
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="500" prefWidth="500"
             fx:id="panel"  fx:controller="com.mycompany.chart.FXMLController">
     <children>
-        
-        <ScatterChart layoutX="0" layoutY="0" fx:id="grafica"  >
+        <HBox>
+            <Label text="Points:"/> 
+            <TextField fx:id="points" promptText="Points" maxWidth="50" text="100" />
+            <Label text="Max:"/>
+            <TextField fx:id="maxValue" promptText="Max" maxWidth="50" text="50" />
+            <Label text="X:"/>
+            <TextField fx:id="x" promptText="X" maxWidth="40" text="0" />
+            <Label text="Y:"/>
+            <TextField fx:id="y" promptText="Y" maxWidth="40" text="0" />
+            <Label text="P:"/>
+            <TextField fx:id="p" promptText="P" maxWidth="50" text="80" />
+            <Label text="R:"/>
+            <TextField fx:id="r" promptText="R" maxWidth="50" text="10" />
+            <Button fx:id="calcularBtn" defaultButton="true" text="Calcular" onAction="#calcular" disable="true"  />            
+        </HBox>
+        <ScatterChart fx:id="grafica"  >
             <xAxis>
                 <NumberAxis label="Eje X" lowerBound="-50" upperBound="50"  tickUnit="5"  />
             </xAxis>
             <yAxis>
                 <NumberAxis label="Eje Y" lowerBound="-50" upperBound="50" tickUnit="5" />
             </yAxis>
-        </ScatterChart> 
+        </ScatterChart>
+        
         
     </children>
-</AnchorPane>
+</VBox>
